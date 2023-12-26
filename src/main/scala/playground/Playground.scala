@@ -4,12 +4,15 @@ import cats.Eval
 
 object Playground {
 
-  private val meaningOfLife = Eval.later {
-    println("Learning cats...")
-    42
+  val someValue: Int = 45
+
+  val someOtherValue: String = someValue match {
+    case 1 => "one"
+    case 2 => "two"
+    case _ => "something else "
   }
 
   def main(args: Array[String]): Unit = {
-    println(meaningOfLife.value)
+    println("Hello...")
   }
 }
